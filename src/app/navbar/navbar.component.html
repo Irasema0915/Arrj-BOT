@@ -1,0 +1,33 @@
+<style>
+    .color{
+      background-color: #E98335;
+      color: #fff;
+      
+    }
+    .letr{
+      font-size: x-large;
+    }
+    .letra{
+      color: #000;
+      font-weight: bold;
+    }
+  </style>
+  <nav  class="navbar navbar-expand-lg color ">
+    <a class="color letr" routerLink="/tabla"><i class="fas fa-robot"></i> Arrj-Bot</a>
+    <br>
+    <div class="collapse navbar-collapse color" id="navbarNavDropdown">
+      <ul class="navbar-nav ">
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link letra" routerLink="/login">Iniciar sesion </a>
+        </li><br>
+        <li class="nav-item" routerLinkActive="active" >
+          <a class="nav-link letra" routerLink="/register">Registrar</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    
+  </div>
+  
+  <router-outlet></router-outlet>

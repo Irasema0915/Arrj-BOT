@@ -1,0 +1,72 @@
+
+<style>
+    .color{
+      background-color: #72C2B4;
+      color: #ffffff;
+      
+        }
+        .borde{
+          border: 2.5px solid #FEE65E;
+        }
+    #letra{
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+    }   
+    #letr{
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }   
+    #leti{
+      font-size: 14px;
+    }
+    #titulo{
+      color: #E98335;
+      font-weight: bold;
+    }
+    img{
+        margin-left: 95px;
+    }
+  </style>
+  <div class="container">
+  
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block "><img width="380px" height="500px" src="../assets/img/logo.jpeg" alt=""></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 mb-4" id="titulo">Iniciar Sesion</h1>
+                  </div>
+                  <form class="user">
+                   
+                    <div class="form-group">
+                      <input type="email" id="leti" class="form-control form-control-user borde" name ="email" aria-describedby="emailHelp" placeholder=" Correo electronico" [(ngModel)]="credential.email" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="password" id="leti" class="form-control form-control-user borde" name ="password" placeholder=" Contraseña" [(ngModel)]="credential.password" required>
+                  </div>
+                    <button class="btn color btn-user btn-block" id="letra" type="submit"  (click)="onLogin()">
+                      Login
+                    </button>
+                    <button  id="letra" type="submit" class="btn btn-danger btn-user btn-block"  >
+                      <i class="fab fa-google"></i><a><span> Iniciar con google</span></a></button>
+                      <button class="btn btn-facebook btn-user btn-block bg-dark" id="letra" > <i class="fas fa-shield-alt"></i> Log In with Auth0 </button>
+                  </form>
+                  <hr>
+                  <div class="text-center">
+                    <a class="small" id="letr" routerLink="/register">Crear una cuenta</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+  
+  
+    </div>
+  </div>
+  <h1>gello</h1>

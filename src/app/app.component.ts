@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AutheticationService } from '../service/authentication.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ARRJ-BOT-FRONT';
+
+  constructor (public auth: AutheticationService){}
 }

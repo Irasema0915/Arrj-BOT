@@ -1,0 +1,47 @@
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+      <!-- Topbar -->
+      <nav class="navbar navbar-expand navbar-light gris topbar mb-4 static-top shadow">
+
+
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto">
+
+          <!-- Nav Item - User Information -->
+          <li class="nav-item dropdown">
+            <a class="dropdown-item" routerLink="/login" id="colores" ><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
+
+            <!-- Dropdown - User Information -->
+
+          </li>
+
+        </ul>
+
+      </nav>
+      <!-- End of Topbar -->
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid">
+
+
+        <h1>Hola putos robots</h1>
+        <table>
+          <tr>
+            <td>Nombre</td>
+            <td>{{details?.name}}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{details?.email}}</td>
+          </tr>
+        </table>
+
+       <!--<router-outlet></router-outlet>-->
+
+
+      </div>
+  
