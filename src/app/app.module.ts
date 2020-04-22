@@ -1,24 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule } from '@angular/forms';
-import {HttpClientModule } from '@angular/common/http';
-import{ RouterModule, Routes} from '@angular/router'
-import {AutheticationService} from '../service/authentication.service';
-import {AuthGuard} from './guards/auth.guard'
+import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
+
+import { AuthGuard } from './guards/auth.guard';
+import { AuthLoginGuard } from './guards/auth-login.guard';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { from } from 'rxjs';
 
-const routes: Routes = [
-  {path: 'login', component:LoginComponent},
+import { TokenService } from '../service/token.service';
+
+const routes:Routes= [
+  {path: 'login', component:LoginComponent, canActivate:[AuthLoginGuard]},
   {path: 'register', component:RegisterComponent},
-  {path: 'home', component:HomeComponent, canActivate: [AuthGuard]}
+  {path: 'home', component:HomeComponent, canActivate:[AuthGuard]},
 
 ];
-
 
 @NgModule({
   declarations: [
@@ -29,13 +31,23 @@ const routes: Routes = [
     HomeComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes)
+    BrowserModule, 
+    AppRoutingModule, 
+    ReactiveFormsModule,
+     HttpClientModule,
+     FormsModule,
+      HttpClientModule,
+      RouterModule.forRoot(routes)
   ],
-  exports:[RouterModule],
-  providers: [AuthGuard, AutheticationService],
+  providers: [
+    AuthGuard,
+    AuthLoginGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

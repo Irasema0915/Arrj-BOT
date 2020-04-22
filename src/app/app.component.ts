@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AutheticationService } from '../service/authentication.service';
+import { AuthenticationService } from '../service/authentication.service';
 
 
 @Component({
@@ -10,5 +10,5 @@ import { AutheticationService } from '../service/authentication.service';
 export class AppComponent {
   title = 'ARRJ-BOT-FRONT';
 
-  constructor (public auth: AutheticationService){}
+  constructor (public auth: AuthenticationService){}
 }

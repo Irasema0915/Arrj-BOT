@@ -36,37 +36,33 @@
             <!-- Nested Row within Card Body -->
             <div class="row">
               <div class="col-lg-6 d-none d-lg-block "><img width="380px" height="500px" src="../assets/img/logo.jpeg" alt=""></div>
-              <div class="col-lg-6">
-                <div class="p-5">
-                  <div class="text-center">
-                    <h1 class="h4 mb-4" id="titulo">Iniciar Sesion</h1>
-                  </div>
-                  <form class="user">
-                   
-                    <div class="form-group">
-                      <input type="email" id="leti" class="form-control form-control-user borde" name ="email" aria-describedby="emailHelp" placeholder=" Correo electronico" [(ngModel)]="credential.email" required>
-                  </div>
-                  <div class="form-group">
-                      <input type="password" id="leti" class="form-control form-control-user borde" name ="password" placeholder=" Contraseña" [(ngModel)]="credential.password" required>
-                  </div>
-                    <button class="btn color btn-user btn-block" id="letra" type="submit"  (click)="onLogin()">
-                      Login
-                    </button>
-                    <button  id="letra" type="submit" class="btn btn-danger btn-user btn-block"  >
-                      <i class="fab fa-google"></i><a><span> Iniciar con google</span></a></button>
-                      <button class="btn btn-facebook btn-user btn-block bg-dark" id="letra" > <i class="fas fa-shield-alt"></i> Log In with Auth0 </button>
-                  </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="small" id="letr" routerLink="/register">Crear una cuenta</a>
-                  </div>
-                </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <div class="text-center ">
+                <h1 class="h4 mb-4 " id="titulo">Iniciar Sesion</h1>
+              </div>
+              <form class="user">
+                
+              <div class="form-group">
+                  <input type="email" id="leti" class="form-control form-control-user borde" name ="email" aria-describedby="emailHelp" placeholder=" Correo electronico" >
+              </div>
+              <div class="form-group">
+                  <input type="password" id="leti" class="form-control form-control-user borde" name ="password" placeholder=" Contraseña" required >
+              </div><br>
+                <button class="btn color btn-user btn-block" id="letra" type="submit" (click)="onLogin()" >
+                  Iniciar Sesion
+                </button>
+              </form>
+              <hr>
+              <div class="text-center">
+                <a class="small" id="letr" routerLink="/register">No tienes una cuenta? Registrate</a>
               </div>
             </div>
           </div>
-        
-  
-  
+        </div>
+      </div>
     </div>
+  
   </div>
-  <h1>gello</h1>
+  <router-outlet></router-outlet>
+  
