@@ -9,8 +9,12 @@ import { User } from '../../app/models/user';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user:User;
+  
 
+  user:User ={
+    email:'',
+    password:''
+  }
   constructor( private auth:AuthenticationService ,private router: Router) { }
 
   ngOnInit(): void {
@@ -18,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   onLogin(){
     this.auth.onLogin(this.user).subscribe(res => {
-      this.router.navigateByUrl('/home');
+      this.router.navigate(['home']);
     });
   }
   

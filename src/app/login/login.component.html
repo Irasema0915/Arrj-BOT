@@ -44,10 +44,10 @@
               <form class="user">
                 
               <div class="form-group">
-                  <input type="email" id="leti" class="form-control form-control-user borde" name ="email" aria-describedby="emailHelp" placeholder=" Correo electronico" >
+                  <input type="email" id="leti" class="form-control form-control-user borde" name ="email" aria-describedby="emailHelp" placeholder=" Correo electronico" [(ngModel)]="user.email">
               </div>
               <div class="form-group">
-                  <input type="password" id="leti" class="form-control form-control-user borde" name ="password" placeholder=" Contraseña" required >
+                  <input type="password" id="leti" class="form-control form-control-user borde" name ="password" placeholder=" Contraseña" required [(ngModel)]="user.password" >
               </div><br>
                 <button class="btn color btn-user btn-block" id="letra" type="submit" (click)="onLogin()" >
                   Iniciar Sesion

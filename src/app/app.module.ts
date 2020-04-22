@@ -17,7 +17,7 @@ import { TokenService } from '../service/token.service';
 
 const routes:Routes= [
   {path: 'login', component:LoginComponent, canActivate:[AuthLoginGuard]},
-  {path: 'register', component:RegisterComponent},
+  {path: 'register', component:RegisterComponent, canActivate:[AuthLoginGuard]},
   {path: 'home', component:HomeComponent, canActivate:[AuthGuard]},
 
 ];
