@@ -9,10 +9,11 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 
+
 const routes:Routes= [
   {path: 'login', component:LoginComponent, canActivate:[AuthLoginGuard]},
   {path: 'register', component:RegisterComponent, canActivate:[AuthLoginGuard]},
-  {path: 'home', component:HomeComponent, canActivate:[AuthGuard]},
+  {path: 'home', component:HomeComponent},
 
 ];
 

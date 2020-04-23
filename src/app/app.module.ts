@@ -15,10 +15,13 @@ import { HomeComponent } from './home/home.component';
 
 import { TokenService } from '../service/token.service';
 
+
+
+
 const routes:Routes= [
   {path: 'login', component:LoginComponent, canActivate:[AuthLoginGuard]},
   {path: 'register', component:RegisterComponent, canActivate:[AuthLoginGuard]},
-  {path: 'home', component:HomeComponent, canActivate:[AuthGuard]},
+  {path: 'home', component:HomeComponent},
 
 ];
 
@@ -28,7 +31,8 @@ const routes:Routes= [
     RegisterComponent,
     LoginComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
     BrowserModule, 
@@ -37,6 +41,7 @@ const routes:Routes= [
      HttpClientModule,
      FormsModule,
       HttpClientModule,
+
       RouterModule.forRoot(routes)
   ],
   providers: [

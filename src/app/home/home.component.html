@@ -1,47 +1,90 @@
-<!-- Content Wrapper -->
-<div id="content-wrapper" class="d-flex flex-column">
-
-    <!-- Main Content -->
-    <div id="content">
-
-      <!-- Topbar -->
-      <nav class="navbar navbar-expand navbar-light gris topbar mb-4 static-top shadow">
-
-
-        <!-- Topbar Navbar -->
-        <ul class="navbar-nav ml-auto">
-
-          <!-- Nav Item - User Information -->
-          <li class="nav-item dropdown">
-            <a class="dropdown-item" routerLink="/login" id="colores" ><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
-
-            <!-- Dropdown - User Information -->
-
-          </li>
-
-        </ul>
-
-      </nav>
-      <!-- End of Topbar -->
-
-      <!-- Begin Page Content -->
-      <div class="container-fluid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ArjRobot</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
 
 
-        <!--<h1>Hola putos robots</h1>
-        <table>
-          <tr>
-            <td>Nombre</td>
-            <td>{{details?.name}}</td>
-          </tr>
-          <tr>
-            <td>Email</td>
-            <td>{{details?.email}}</td>
-          </tr>
-        </table>-->
+<!--<nav class="navbar navbar-expand navbar-light gris topbar mb-4 static-top shadow">
 
-       <!--<router-outlet></router-outlet>-->
+  <ul class="navbar-nav ml-auto">
 
+    <li class="nav-item dropdown">
+      <a class="dropdown-item" routerLink="/login" id="colores" (click)="onLogout()" ><i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
+    </li>
+  </ul>
+
+</nav>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-warning " routerLink="/login"  (click)="onLogout()"  type="submit"><i class="fas fa-sign-out-alt"></i> Cierra Sesion</button>
+      <button class="btn btn-outline-warning "   (click)="Camara('capturafoto')"  type="submit"><i class="fas fa-camera-retro"></i> Camara </button>
+    </form>
+  </div>
+</nav>
+
+
+  <div class="col-12">
+    <div class="row">
+      <div class="container mt-3">
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let mensaje of message">
+        {{mensaje}}
+      </li>
+      <li class="list-group-item">
+         <button class="btn btn-block btn-info" (click)="adelante('adelante')" >
+           Adelante
+         </button>
+         <br>
+         <br>
+         <button class="btn btn-block btn-warning" (click)="atras('atras')">
+          Atras
+        </button>
+        <br>
+        <br>
+        <button class="btn btn-block btn-success" (click)="izquierda('izquierda')">
+          Izquierda
+        </button>
+        <br>
+        <br>
+        <button class="btn btn-block btn-danger" (click)="derecha('derecha')">
+          Derecha
+        </button>
+        <br>
+        <br>
+        <button class="btn btn-block btn-info" (click)="Suscribirte('Subscripcion')" >
+          Subscripcion
+        </button>
+
+        <br>
+        <br>
+        <input  name="text" type="text" [(ngModel)]="text">
+        <button class="btn btn-block btn-info" (click)="Firebase()" >
+          Subscripcion
+        </button>
+      </li>
+      <li class="list-group-item" *ngFor="let fire of firebase">
+        {{fire}}
+      </li>
+  </ul>
 
       </div>
-  
+    </div>
+  </div>
+
+</body>
+</html>
+
+<router-outlet></router-outlet>
