@@ -9,7 +9,7 @@ export class HomeService {
 
   constructor() { }
 
-  private ws = Ws('ws://localhost:3333');
+  private ws = Ws('ws://54.193.210.128');
 
   public connect()
   {

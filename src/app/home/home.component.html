@@ -29,7 +29,7 @@
 <div>
     <form class="form-inline my-2 my-lg-0">
       <button class="btn btn-outline-warning " routerLink="/login"  (click)="onLogout()"  type="submit"><i class="fas fa-sign-out-alt"></i> Cierra Sesion</button>
-      <button class="btn btn-outline-warning "   (click)="Camara('capturafoto')"  type="submit"><i class="fas fa-camera-retro"></i> Camara </button>
+      <button class="btn btn-outline-warning "   (click)="Camara('foto')"  type="submit"><i class="fas fa-camera-retro"></i> Camara </button>
     </form>
   </div>
 </nav>
@@ -44,25 +44,49 @@
         {{mensaje}}
       </li>
       <li class="list-group-item">
-         <button class="btn btn-block btn-info" (click)="adelante('adelante')" >
+         <button class="btn btn-block btn-info" (click)="adelante('Adelante')" >
            Adelante
          </button>
          <br>
          <br>
-         <button class="btn btn-block btn-warning" (click)="atras('atras')">
+         <button class="btn btn-block btn-warning" (click)="atras('Atras')">
           Atras
         </button>
         <br>
         <br>
-        <button class="btn btn-block btn-success" (click)="izquierda('izquierda')">
+        <button class="btn btn-block btn-success" (click)="izquierda('Izquierda')">
           Izquierda
         </button>
         <br>
         <br>
-        <button class="btn btn-block btn-danger" (click)="derecha('derecha')">
+        <button class="btn btn-block btn-danger" (click)="derecha('Derecha')">
           Derecha
         </button>
         <br>
+        <button class="btn btn-block btn-danger" (click)="derechab('Derecha')">
+          Izquierda brazo
+        </button>
+        <br>
+        <br>
+        <button class="btn btn-block btn-danger" (click)="izquierdab('Izquierda')">
+          Derecha Brazo
+        </button>
+        <br>
+        <button class="btn btn-block btn-danger" (click)="centro('Centro')">
+          Centro 
+        </button>
+        <br>
+        <button class="btn btn-block btn-danger" (click)="soltar('Soltar')">
+          Soltar pinza
+        </button>
+        <br>
+        <button class="btn btn-block btn-danger" (click)="agarrar('Agarre')">
+          Agarrar pinza
+        </button>
+        <br>
+         <button class="btn btn-block btn-danger" (click)="abajo('Abajo')">
+          Abajate
+        </button>
         <br>
         <button class="btn btn-block btn-info" (click)="Suscribirte('Subscripcion')" >
           Subscripcion

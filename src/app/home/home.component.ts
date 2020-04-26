@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   }
   
    ngOnInit(): void {
-     this.ws = Ws('ws://localhost:3333', {
+     this.ws = Ws('ws://54.193.210.128', {
        path: 'ArjRobot'
      });
      this.firebase.push('Datos enviados por firebase');
@@ -43,29 +43,71 @@ export class HomeComponent implements OnInit {
   }
 
   adelante(param: string){
-    this.feed.emit('adelante', param);
-    this.feed.on('changeAdelante', ( data: any) => {
+    this.feed.emit('carro', param);
+    this.feed.on('movimientosc', ( data: any) => {
       this.message.push(data);
     });
     
   }
   atras(param: string){
-    this.feed.emit('atras', param);
-    this.feed.on('changeAtras', ( data: any) => {
+    this.feed.emit('carro', param);
+    this.feed.on('movimientosc', ( data: any) => {
       this.message.push(data);
     });
     
   }
   izquierda(param: string){
-    this.feed.emit('Izquierda brazo', param);
-    this.feed.on('changeIzquierda', ( data: any) => {
+    this.feed.emit('carro', param);
+    this.feed.on('movimientosc', ( data: any) => {
       this.message.push(data);
     });
     
   }
   derecha(param: string){
-    this.feed.emit('Derecha brazo', param);
-    this.feed.on('changeDerecha', ( data: any) => {
+    this.feed.emit('carro', param);
+    this.feed.on('movimientosc', ( data: any) => {
+      this.message.push(data);
+    });
+    
+  }
+  centro(param: string){
+    this.feed.emit('brazo', param);
+    this.feed.on('movimientosb', ( data: any) => {
+      this.message.push(data);
+    });
+    
+  }
+  soltar(param: string){
+    this.feed.emit('pinza', param);
+    this.feed.on('movimientosp', ( data: any) => {
+      this.message.push(data);
+    });
+    
+  }
+  agarrar(param: string){
+    this.feed.emit('pinza', param);
+    this.feed.on('movimientosp', ( data: any) => {
+      this.message.push(data);
+    });
+    
+  }
+  derechab(param: string){
+    this.feed.emit('brazo', param);
+    this.feed.on('movimientosb', ( data: any) => {
+      this.message.push(data);
+    });
+    
+  }
+  izquierdab(param: string){
+    this.feed.emit('brazo', param);
+    this.feed.on('movimientosb', ( data: any) => {
+      this.message.push(data);
+    });
+    
+  }
+  abajo(param: string){
+    this.feed.emit('brazo', param);
+    this.feed.on('movimientosb', ( data: any) => {
       this.message.push(data);
     });
     
@@ -86,8 +128,8 @@ export class HomeComponent implements OnInit {
   }
   Camara(param:string){
  
-    this.feed.emit('capturarfoto', param);
-    this.feed.on('capturarfoto', ( data: any) => {
+    this.feed.emit('foto', param);
+    this.feed.on('capturarf', ( data: any) => {
       this.message.push(data);
     });
     window.location.reload();
