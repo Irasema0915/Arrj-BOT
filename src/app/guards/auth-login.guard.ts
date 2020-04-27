@@ -9,14 +9,14 @@ import { AuthenticationService } from '../../service/authentication.service';
 export class AuthLoginGuard implements CanActivate {
   constructor(private authService: AuthenticationService, private router: Router) {}
   canActivate() {
-    return this.canLoad();
+    if (this.authService.isLoggedIn()) {
+      this.router.navigateByUrl('/home');
+    }
+    return !this.authService.isLoggedIn();
+  
   }
 
   canLoad() {
-    if (this.authService.isLoggedIn()) {
-      this.router.navigate(['home']);
-    }
-    return !this.authService.isLoggedIn();
   }
 
 }

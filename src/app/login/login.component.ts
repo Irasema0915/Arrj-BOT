@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   onLogin(){
     this.auth.onLogin(this.user).subscribe(res => {
-      this.router.navigate(['home']);
+      this.router.navigate(['/home']);
     });
   }
   

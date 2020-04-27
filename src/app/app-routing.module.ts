@@ -11,8 +11,8 @@ import { HomeComponent } from './home/home.component';
 
 
 const routes:Routes= [
-  {path: 'login', component:LoginComponent, canActivate:[AuthLoginGuard]},
-  {path: 'register', component:RegisterComponent, canActivate:[AuthLoginGuard]},
+  {path: 'login', component:LoginComponent},
+  {path: 'register', component:RegisterComponent},
   {path: 'home', component:HomeComponent},
 
 ];

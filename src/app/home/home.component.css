@@ -1,47 +1,84 @@
-.material-switch>input[type="checkbox"] {
-    display: none;
+.cam {
+    margin-left: 750px;
+    margin-top: -180px;
 }
 
-.material-switch>label {
-    cursor: pointer;
-    height: 0px;
-    position: relative;
-    width: 40px;
+.bot1 {
+    font-size: 85px;
+    margin-left: 210px;
+    margin-top: 30px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #4f9;
 }
 
-.material-switch>label::before {
-    background: rgb(0, 0, 0);
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    content: '';
-    height: 16px;
-    margin-top: -8px;
-    position: absolute;
-    opacity: 0.3;
-    transition: all 0.4s ease-in-out;
-    width: 40px;
+.bot2 {
+    font-size: 85px;
+    margin-top: -280px;
+    margin-left: 90px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #1DD7FD;
 }
 
-.material-switch>label::after {
-    background: rgb(255, 255, 255);
-    border-radius: 16px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    content: '';
-    height: 24px;
-    left: -4px;
-    margin-top: -8px;
-    position: absolute;
-    top: -4px;
-    transition: all 0.3s ease-in-out;
-    width: 24px;
+.bot3 {
+    font-size: 85px;
+    margin-top: -315px;
+    margin-left: 335px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #fc1abb
 }
 
-.material-switch>input[type="checkbox"]:checked+label::before {
-    background: inherit;
-    opacity: 0.5;
+.bot4 {
+    font-size: 85px;
+    margin-top: 20px;
+    margin-left: 210px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #FADA2B;
 }
 
-.material-switch>input[type="checkbox"]:checked+label::after {
-    background: inherit;
-    left: 20px;
+.bot5 {
+    font-size: 85px;
+    margin-left: 750px;
+    margin-top: -595px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #15E6CC;
+}
+
+.bot6 {
+    font-size: 85px;
+    margin-left: 740px;
+    margin-top: -310px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #C501E2;
+}
+
+.bot7 {
+    font-size: 85px;
+    margin-left: 600px;
+    margin-top: -355px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #FF6A62;
+}
+
+.bot8 {
+    font-size: 85px;
+    margin-left: 905px;
+    margin-top: -390px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #C6E602;
+}
+
+.bot9 {
+    font-size: 85px;
+    margin-left: 600px;
+    margin-top: -555px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #2B97FA;
+}
+
+.bot10 {
+    font-size: 85px;
+    margin-left: 900px;
+    margin-top: -755px;
+    text-shadow: 0 0 30px #fff;
+    box-shadow: 0 0 20px #2EF8A0
 }

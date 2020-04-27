@@ -23,13 +23,11 @@
 
 </nav>-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  
 <div>
-    <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-warning " routerLink="/login"  (click)="onLogout()"  type="submit"><i class="fas fa-sign-out-alt"></i> Cierra Sesion</button>
-      <button class="btn btn-outline-warning "   (click)="Camara('foto')"  type="submit"><i class="fas fa-camera-retro"></i> Camara </button>
+    <form class="form-inline ">
+      <button class="btn btn-outline-warning" routerLink="/login"  (click)="onLogout()"  type="submit"><i class="fas fa-sign-out-alt"></i> Cierra Sesion</button>
+      
     </form>
   </div>
 </nav>
@@ -37,63 +35,62 @@
 
   <div class="col-12">
     <div class="row">
-      <div class="container mt-3">
+      <div class="container">
+
+    
 
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let mensaje of message">
         {{mensaje}}
       </li>
       <li class="list-group-item">
-         <button class="btn btn-block btn-info" (click)="adelante('Adelante')" >
-           Adelante
+         <button class="btn  bot1" (click)="adelante('Adelante')" >
+           <i class="fas fa-arrow-up"></i>
          </button>
+         
          <br>
-         <br>
-         <button class="btn btn-block btn-warning" (click)="atras('Atras')">
-          Atras
+         <button class="btn bot4" (click)="atras('Atras')">
+          <i class="fas fa-arrow-down"></i>
+        </button>
+        
+        <br>
+        <button class="btn bot2" (click)="izquierda('Izquierda')">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        
+        <br>
+        <button class="btn  bot3" (click)="derecha('Derecha')">
+          <i class="fas fa-arrow-right"></i>
         </button>
         <br>
+        <button class="btn bot9" (click)="derechab('Derecha')">
+          <i class="fas fa-hand-point-left"></i>
+        </button>
+        
         <br>
-        <button class="btn btn-block btn-success" (click)="izquierda('Izquierda')">
-          Izquierda
+        <button class="btn bot5" (click)="izquierdab('Izquierda')">
+          <i class="fas fa-hand-point-right"></i>
         </button>
         <br>
-        <br>
-        <button class="btn btn-block btn-danger" (click)="derecha('Derecha')">
-          Derecha
+        <button class="btn bot6" (click)="centro('Centro')">
+          <i class="fas fa-handshake"></i> 
         </button>
         <br>
-        <button class="btn btn-block btn-danger" (click)="derechab('Derecha')">
-          Izquierda brazo
+        <button class="btn bot7" (click)="soltar('Soltar')">
+          <i class="fas fa-hand-spock"></i>
         </button>
         <br>
-        <br>
-        <button class="btn btn-block btn-danger" (click)="izquierdab('Izquierda')">
-          Derecha Brazo
+        <button class="btn bot8" (click)="agarrar('Agarre')">
+          <i class="fas fa-hand-rock"></i>
         </button>
         <br>
-        <button class="btn btn-block btn-danger" (click)="centro('Centro')">
-          Centro 
+         <button class="btn bot10" (click)="abajo('Abajo')">
+          <i class="fas fa-hand-point-down"></i>
         </button>
-        <br>
-        <button class="btn btn-block btn-danger" (click)="soltar('Soltar')">
-          Soltar pinza
-        </button>
-        <br>
-        <button class="btn btn-block btn-danger" (click)="agarrar('Agarre')">
-          Agarrar pinza
-        </button>
-        <br>
-         <button class="btn btn-block btn-danger" (click)="abajo('Abajo')">
-          Abajate
-        </button>
-        <br>
-        <button class="btn btn-block btn-info" (click)="Suscribirte('Subscripcion')" >
-          Subscripcion
-        </button>
-
-        <br>
-        <br>
+        <button class="btn  "   
+    (click)="Camara('foto')"  type="submit"> 
+    <img width="110px" height="110px" class="cam" src="../assets/img/camara.jpg" alt=""></button>
+     <!--
         <input  name="text" type="text" [(ngModel)]="text">
         <button class="btn btn-block btn-info" (click)="Firebase()" >
           Subscripcion
@@ -101,7 +98,7 @@
       </li>
       <li class="list-group-item" *ngFor="let fire of firebase">
         {{fire}}
-      </li>
+      </li>--> 
   </ul>
 
       </div>
